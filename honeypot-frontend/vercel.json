@@ -1,11 +1,4 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "framework": "nextjs",
-  "functions": {
-    "api/**/*.ts": {
-      "runtime": "nodejs20.x"
-    }
-  },
-  "installCommand": "cd honeypot-frontend && npm install",
-  "buildCommand": "cd honeypot-frontend && npm run build"
+  "framework": "nextjs"
 }

@@ -1,49 +1,86 @@
-# HoneyPot Monorepo
+# HoneyPot Game Frontend
 
-This repository contains:
+A Next.js frontend for the HoneyPot Game - a blockchain-based NFT game where players can collect and trade bee NFTs.
 
-- `honeypot-frontend`: Next.js 15 app (React 19) deployed on Vercel
-- `contracts`: Hardhat workspace for smart contracts
+## Features
 
-## Deploy on Vercel
+- 🐝 Bee NFT Collection and Trading
+- 🌐 Web3 Integration with RainbowKit and Wagmi
+- 🎨 Modern UI with Tailwind CSS
+- ⚡ Next.js 15 with App Router
+- 🔗 Blockchain connectivity
 
-Vercel is configured via the root `vercel.json` to build only the frontend:
+## Tech Stack
 
-```json
-{
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "rootDirectory": "honeypot-frontend",
-  "framework": "nextjs"
-}
-```
+- **Framework**: Next.js 15
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Web3**: RainbowKit, Wagmi, Viem
+- **Animation**: React Lottie Player
+- **Icons**: Lucide React
 
-Steps:
+## Getting Started
 
-1. Push this repo to GitHub.
-2. Import the repo into Vercel.
-3. Leave install/build settings as defaults. Vercel will auto-detect Next.js.
-4. Add any required environment variables in Vercel Project Settings.
-
-## Local Development
-
-Frontend:
+First, install dependencies:
 
 ```bash
-cd honeypot-frontend
 npm install
+```
+
+Then, run the development server:
+
+```bash
 npm run dev
 ```
 
-Contracts:
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Project Structure
+
+```
+src/
+├── app/                 # Next.js App Router pages
+├── components/          # React components
+│   ├── landing/         # Landing page components
+│   ├── layout/          # Layout components
+│   ├── sections/        # Page sections
+│   └── ui/              # UI components
+├── data/                # Static data
+└── lib/                 # Utility functions
+```
+
+## Deployment
+
+This project lives at the repository root. Deploying to Vercel only needs the
+default Next.js settings:
+
+1. Push your code to GitHub.
+2. Create a new Vercel project and select the repo.
+3. Accept the default install/build commands—Vercel auto-detects Next.js.
+4. Add the required environment variables (see below) for Preview and Production.
+5. Trigger a deploy—every push to `main` will rebuild automatically.
+
+## Environment Variables
+
+Make sure to set up:
+
+- `NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID` – WalletConnect/AppKit project ID.
+
+## Contracts Workspace
+
+The Hardhat project remains in `contracts/`. Change into that directory for any
+solidity work:
 
 ```bash
 cd contracts
 npm install
-npx hardhat compile
 npx hardhat test
 ```
 
-## Notes
+## Contributing
 
-- `.gitignore` excludes `node_modules`, Next.js/Hardhat caches, and `build-info`.
-- If the frontend needs ABIs, import them from `contracts/artifacts/` or copy the required JSONs into the frontend.
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request

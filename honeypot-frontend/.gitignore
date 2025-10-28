@@ -1,10 +1,16 @@
 # Node
 **/node_modules/
+**/.pnp
 **/.next/
 **/.turbo/
 **/.vercel/
 **/dist/
 **/build/
+**/coverage/
+**/out/
+.pnp.js
+.yarn/install-state.gz
+*.tsbuildinfo
 
 # Logs
 **/npm-debug.log*
@@ -26,4 +32,3 @@ contracts/artifacts/build-info/
 *.swp
 .vscode/
 .idea/
-
