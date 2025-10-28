@@ -1,13 +1,14 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "framework": "nextjs",
+  "builds": [
+    {
+      "src": "honeypot-frontend/package.json",
+      "use": "@vercel/next"
+    }
+  ],
   "functions": {
     "api/**/*.ts": {
       "runtime": "nodejs20.x"
     }
-  },
-  "installCommand": "cd honeypot-frontend && npm install",
-  "buildCommand": "cd honeypot-frontend && npm run build",
-  "outputDirectory": "honeypot-frontend/.next"
+  }
 }
-
