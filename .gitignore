@@ -1,0 +1,29 @@
+# Node
+**/node_modules/
+**/.next/
+**/.turbo/
+**/.vercel/
+**/dist/
+**/build/
+
+# Logs
+**/npm-debug.log*
+**/yarn-error.log*
+**/pnpm-debug.log*
+**/.pnpm-debug.log*
+
+# Env
+*.env
+*.env.local
+*.env.*.local
+
+# Hardhat
+contracts/cache/
+contracts/artifacts/build-info/
+
+# OS/Editor
+.DS_Store
+*.swp
+.vscode/
+.idea/
+
